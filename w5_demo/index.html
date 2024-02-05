@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Garrett Furtado">
+    <meta name="description" content="forms and tables demo">
+    
+    <title>W5 | Demo</title>
+    <style>
+        table, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+<h1>Form With a Table</h1>
+
+<!-- when working with tables & forms, put the table INSIDE OF the FOR< -->
+<!-- work row by row and have a plan before starting your code! -->
+
+<form method="GET" action="">
+
+    <table> 
+        <!-- TABLE HEAD -->
+        <thead>
+            <!-- COLUM HEADERS - must use <b>/<h#> if you want them to bold -->
+            
+            <!-- table row: one row of data, populated with <td> -->
+            <!-- MAKE SURE EVERY ROW HAS THE SAME NUMBER OF <td> -->
+            <tr>
+                <!-- LABEL -->
+                <!-- make sure the for matches inputs id & name (almost always) -->
+                <td>
+                    <h2>Label</h2>
+                </td>
+
+                <!-- INPUT -->
+                <td>
+                    <h2>Input</h2>
+                </td>
+
+            </tr>
+
+
+        </thead>
+
+        <!-- TABLE BODY -->
+        <tbody>
+            <tr>
+                <!-- LABEL -->
+                <!-- make sure the for matches inputs id & name (almost always) -->
+                <td>
+                    <label for="fName">First Name:</label>
+                </td>
+
+                <!-- INPUT -->
+                <td>
+                    <input type="text" name="fName" id="fName">
+                </td>
+
+            </tr>
+
+            <tr>
+                <!-- LABEL -->
+                <!-- make sure the for matches inputs id & name (almost always) -->
+                <td>
+                    <label for="lName">Last Name:</label>
+                </td>
+
+                <!-- INPUT -->
+                <td>
+                    <input type="text" name="lName" id="lName" placeholder="Targaryen" maxlength="10" required  >
+                </td>
+
+            </tr>
+
+            <tr>
+                <!-- LABEL -->
+                <!-- make sure the for matches inputs id & name (almost always) -->
+                <td>
+                    <label for="age">Age:</label>
+                </td>
+
+                <!-- INPUT -->
+                <td>
+                    <input type="number" name="age" id="age" min="0" >
+                </td>
+
+            </tr>
+            
+            <tr>
+                <!-- LABEL -->
+                <!-- make sure the for matches inputs id & name (almost always) -->
+                <td>
+                    <label for="comments">Comments:</label>
+                </td>
+
+                <!-- INPUT -->
+                <td>
+                    <textarea id="comments" name="comments" rows="10" cols="20" placeholder="Leave your comments here ...."></textarea>
+                </td>
+
+            </tr>
+
+            <tr>
+                <!-- LABEL -->
+                <!-- DROP DOWN SELECTION ELEMENT -->
+                <td>
+                    <label for="faveColor">Pick Your <br> Faviorte Color:</label>
+                </td>
+
+                <!-- INPUT -->
+                <td>
+                    <!-- user is restricted to only selecting one option -->
+                    <select name="faveColor" id="faveColor">
+                        <option value="r">RED</option>
+                        <option value="o">ORANGE</option>
+                        <option value="y">YELLOW</option>
+                        <option value="g">GREEN</option>
+                        <option value="b" style="color: blue;">BLUE</option>
+                        <option value="i">INDIGO</option>
+                        <option value="v">VIOLET</option>
+                    </select>
+                </td>
+
+            </tr>
+
+            <tr>
+                <!-- LABEL -->
+                <!-- DROP DOWN SELECTION ELEMENT -->
+                <td>
+                    <label for="study">Program of Study:</label>
+                </td>
+
+                <!-- INPUT -->
+                <td>
+                    <input type="radio" name="study" value="SE">
+                    Software Engineering<br>
+                    <input type="radio" name="study" value="CYB">
+                    Cyber Security & Network Engineering<br>
+                    <input type="radio" name="study" value="WD">
+                    Web Development<br>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <!-- LABEL -->
+                <!-- CHECKBOX ELEMENT - user can select as many as they'd like!-->
+                <td>
+                    <label for="vehicle">Select Your Vehicle:</label>
+                </td>
+
+                <!-- INPUT -->
+                <td>
+                    <input type="checkbox" name="vehicle" value="car">
+                    CAR<br>
+                    <input type="checkbox" name="vehicle" value="horse">
+                    HORSE<br>
+                    <input type="checkbox" name="vehicle" value="dragon">
+                    DRAGON<br>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <!-- LABEL -->
+                <!-- CHECKBOX ELEMENT - user can select as many as they'd like!-->
+                <td>
+                    <label for="date">Date:</label>
+                </td>
+
+                <!-- INPUT -->
+                <td>
+                    <input type="date" name="date" id="date">
+                </td>
+
+            </tr>
+            
+            <tr>
+                <!-- LABEL -->
+                <!-- CHECKBOX ELEMENT - user can select as many as they'd like!-->
+                <td>
+                    
+                </td>
+
+                <!-- INPUT -->
+                <td>
+                    <input type="submit" value="SUBMIT --w-( ' U ' )-w--">
+                </td>
+
+            </tr>
+        </tbody>
+
+        <!-- TABLE FOOT -->
+        <tfoot>
+
+            
+        </tfoot>
+
+    </table>
+
+</form> <!--END OF FORM-->
+
+</body>
+</html>
