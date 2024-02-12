@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Garrett Furtado">
+    <meta name="description" content="Week 6 JS Intro">
+    <title>Week 6 | JS Demo</title>
+    <!-- in document styling -->
+    <style>
+        /* write in css here */
+        body {
+            background-color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- we should have at least 1 HTML element in the page before the <script> tags -->
+    <h1>W6 | Intro to Javascript Demo</h1>
+
+    <!-- IN DOCUMENT JAVASCRIPT -->
+    <script>
+        //writing JS in here
+        //This is a COMMENT in JS
+
+        //all variables must be declared and defined before they can be used
+        //we declare a varaible with the keyword: var
+
+        var name //declares only, now browse understanding what 'name' is when see
+        name = "GF" //defining the variable; assinging a value
+
+        var name = "Garrett" //decleration and immediate assignment
+        
+        var num1 = 10 
+        var num2 = 7 
+
+        var sum = num1 + num2
+
+        //cannot use num1 and num2 in a process until thye are both declared and defined
+        console.log(`Num1: ${num1} | Num2: ${num2} | Sum: ${sum}`) // `` != ''
+        //console.log() olny used fot development/debugging
+
+        //alert() can be seen/viewed by a user visiting the page
+        //create a pop-up window in the browser page; user must interact with the alert() before any further lines are read
+
+        alert(`Hi there, ${name}`)
+
+        console.log(`passed the alert()`)
+
+        //INPUT------------------------------------
+
+        //prompt() pormpting the user with a message; a pop-up with text field input element is displayed - user enters data into field. presses OK to continue
+
+        var lname = prompt(`Hi again ${name}, Please enter your LAST name:`)
+
+        console.log(`passed the prompt()`)
+
+        console.log(`Last: ${lname}`) //for developer
+        alert(`Last: ${lname}`) // for user
+
+        //CAST PROMPS RETURNS TO ENSURE THEY ARE NUMBERS
+        //Must use Number() to gain access to Number properties + methods
+
+
+        var userNum = Number(prompt(`Enter a number: `))
+        //console.log(userNum * 10)
+        console.log(userNum.toFixed(2)) //rounds decimal to what you want when its a number type
+
+        var tax = userNum * 0.20
+
+        alert(`Your TAXES DUE: \n $${tax.toFixed(2)}`)
+        console.log(`Your TAXES DUE: $${tax.toFixed(2)}`)
+
+        //alert(`GROSS PAY $${} \nTAX AMOUNT: $${} \nNET PAY: $${}`) //w6 final display
+
+    </script>
+
+</body>
+</html>
