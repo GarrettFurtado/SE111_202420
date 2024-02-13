@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Garrett Furtado">
+    <meta name="description" content="pay calculator">
+    <title>W6 | JS Pay Calculator</title>
+    <style>
+        /* write in css here */
+        body {
+            background-color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>W6 | JS Pay Calculator</h1>
+
+
+    <script>
+
+        var hourlyRate = Number(prompt(`Please Input Your Hourly Rate: `))
+
+        var hoursWorked = Number(prompt(`Please Input Your Hours Worked: `))
+
+        var taxRate = 0.20
+
+        var twoWeekPeriod = hoursWorked * 2
+
+        var grossPay = twoWeekPeriod * hourlyRate
+
+        var uncleSamsCut = grossPay * taxRate
+
+        var netPay = grossPay - uncleSamsCut
+
+        alert(`Gross Pay: $${grossPay.toFixed(2)}\nUncle Sam's Cut: $${uncleSamsCut.toFixed(2)}\nNet Pay: $${netPay.toFixed(2)}`)
+        console.log(`Gross Pay: $${grossPay.toFixed(2)}\nUncle Sam's Cut: $${uncleSamsCut.toFixed(2)}\nNet Pay: $${netPay.toFixed(2)}`)
+
+    </script>
+
+    <img src="images/check.png" alt="validation of page" width="100%">
+
+</body>
+</html>
