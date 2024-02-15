@@ -20,22 +20,25 @@
 
     <script>
 
+        //users hourly rate
         var hourlyRate = Number(prompt(`Please Input Your Hourly Rate: `))
-
+        //users hours worked
         var hoursWorked = Number(prompt(`Please Input Your Hours Worked: `))
-
+        //users tax rate
         var taxRate = 0.20
-
+        //users hours *2 for the two eek period
         var twoWeekPeriod = hoursWorked * 2
-
+        //users gross pay
         var grossPay = twoWeekPeriod * hourlyRate
-
+        //tax taken out
         var uncleSamsCut = grossPay * taxRate
-
+        //users net pay
         var netPay = grossPay - uncleSamsCut
-
+        //display of info
         alert(`Gross Pay: $${grossPay.toFixed(2)}\nUncle Sam's Cut: $${uncleSamsCut.toFixed(2)}\nNet Pay: $${netPay.toFixed(2)}`)
-        console.log(`Gross Pay: $${grossPay.toFixed(2)}\nUncle Sam's Cut: $${uncleSamsCut.toFixed(2)}\nNet Pay: $${netPay.toFixed(2)}`)
+        console.log(`Gross Pay: $${grossPay.toFixed(2)}`)
+        console.log(`Uncle Sam's Cut: $${uncleSamsCut.toFixed(2)}`)
+        console.log(`Net Pay: $${netPay.toFixed(2)}`)
 
     </script>
 
