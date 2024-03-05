@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 2 Files</title>
+<style type="text/css">
+
+	.red {
+        
+		border:1px solid red;
+		
+		margin-bottom:10px;
+		
+		min-height:20px;
+	
+	 }
+</style>
+</head>
+
+<body>
+	<h1>Week 9 | Creating Elements</h1>
+
+
+
+</body>
+
+<script type="text/javascript">
+	//Use this Array of objects to complete the assignment.
+	var people =[
+		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+		{first:"Marion", last:"Cobretti", credit:"Cobra" }
+	]
+	
+	var body = document.querySelector(`body`)
+
+	for (let i = 0; i < people.length; i++)
+        {
+            // for every object in the array w will add a div elemten to the body to hold all of the objects data (properties and values)
+
+            // first we create the div element for the current array object
+            var tempDiv = document.createElement(`div`)
+            //add an ID and class to this new div using the .setAttribute()
+            tempDiv.setAttribute(`id`, people[i].first)
+            //.setAttribute() takes 2 args: attribute name, value
+            tempDiv.setAttribute(`class`, `red`)
+
+            //add the actual object info into <p> in the <div>
+            //this info comes from the object property (key) values
+            //for every proprerty in the object --> for key in loop
+            for (let key in people[i])
+            {
+                //for every property (key!) create a paragraph element
+                var p = document.createElement(`p`)
+
+                //for every element, create a text node to hold the data 
+                var text = document.createTextNode(people[i][key])
+
+                //add the text to the p
+
+                p.appendChild(text)
+                tempDiv.appendChild(p)
+
+            }
+
+            // add the new div to the body elements using the .appendChild()
+            body.appendChild(tempDiv)
+        }
+
+
+</script>
+
+</html>
